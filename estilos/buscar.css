@@ -1,0 +1,45 @@
+body{
+   padding-top: 5%;
+}
+
+form{
+    width: 300px;
+    margin: 0 auto;
+}
+
+fieldset{
+    background: #ffffff;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0 0 0 40px;
+}
+
+input{
+    color: #666666;
+    border: none;
+    z-index: 2;
+}
+
+button{
+    font-size: 1.2em;
+    width: 50px;
+    border: none;
+    background: #333;
+    transform:translate(-50,0);
+}
+
+.fa-search{
+ color: #bbb;
+ text-align: center;
+ transition: all .2s ease-in-out;
+}
+
+input:focus{
+    outline:none;
+}
+
+input:focus + button{
+    transform:translate(0,0);
+    transition-duration: .10s
+
+}

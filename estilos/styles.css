@@ -1,0 +1,51 @@
+/*Estilo del boton arriba*/
+
+#Arriba {
+position: fixed;
+bottom: 30px; /* Distancia desde abajo */
+right: 30px; /* Distancia desde la derecha */
+/*BOTON*/
+width: 60px; /* Ancho del botón */
+height: 60px; /* Alto del botón */
+display: block;
+background: url(http://lh5.googleusercontent.com/-luDGEoQ_WZE/T1Ak-gta5MI/AAAAAAAACPI/ojfEGiaNmGw/s60/flecha-arriba.png) no-repeat center center;
+}
+
+#Arriba:hover{
+	cursor: pointer;
+}
+
+/*Estilo del boton arriba y abajo*/
+
+#Arriba1{
+
+    position: fixed;
+    bottom: 100px; /* Distancia desde abajo */
+    right: 30px; /* Distancia desde la derecha */
+    /*BOTON*/
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    display: block;
+    background: url(http://lh5.googleusercontent.com/-luDGEoQ_WZE/T1Ak-gta5MI/AAAAAAAACPI/ojfEGiaNmGw/s60/flecha-arriba.png) no-repeat center center;
+    }
+    
+    #Arriba1:hover{
+        cursor: pointer;
+    }
+    
+    
+    #Abajo {
+    -webkit-transform:rotate(180deg);
+    position: fixed;
+    bottom: 30px; /* Distancia desde abajo */
+    left:30px; /* Distancia desde la derecha */
+    /*BOTON*/
+    width: 60px; /* Ancho del botón */
+    height: 60px; /* Alto del botón */
+    display: block;
+    background: url(http://lh5.googleusercontent.com/-luDGEoQ_WZE/T1Ak-gta5MI/AAAAAAAACPI/ojfEGiaNmGw/s60/flecha-arriba.png) no-repeat center center;
+    }
+    
+    #Abajo:hover{
+        cursor: pointer;
+    }

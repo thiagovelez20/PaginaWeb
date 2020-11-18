@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Equipo/Sitio Web</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/estilosoverlay.css">
+    <link href="https://file.myfontastic.com/okddXECRAaGzkXdxgiwqXk/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/equipo.css">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <script src='http://code.jquery.com/jquery-1.10.2.min.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+        //Función para ir hasta arriba del documento
+        //Objeto JQuery(): Devuelve una colección de elementos coincidentes con el o los argumentos pasados,
+        //ya sea que se encuentren en el DOM o sean creados por el paso de una cadena HTML.
+        
+           /* jQuery.noConflict();				//Renunciar al control de jQuery de la variable $.
+                                                //$ es un selector que le pasa atributos a JQuery()
+            jQuery(document).ready(function() { //Especifica una funcion que se ejecuta cuando el DOM (Documento)
+                                                //esta completamente cargado
+                jQuery("#ArribayAbajo").hide(); 	//ocultamos el boton para el primer ejemplo
+                jQuery("#Arriba").hide();		//Oculta los elementos que coincidad con el identificador
+                jQuery(function () {			//JQuery(funcion()) Ejecuta la funcion cuando se carga el DOM (esta listo)
+                    jQuery(window).scroll(function () { //Manejador del evento 'scroll' que ejecuta cierta funcion
+                        if (jQuery(this).scrollTop() > 50) { //Obtiene el valor de la posicion actual de la barra de 	
+                                                             //'scroll' con respecto al elemento, en este caso 'this'
+                            jQuery('#Arriba').fadeIn();		 //Muestra los elementos coincidentes con un efecto de  		
+                                                             //desvanecimiento
+                        } else {
+                            jQuery('#Arriba').fadeOut();     //Oculta los elementos coincidentes con un efecto de  		
+                                                             //desvanecimiento
+                        }
+                    });
+                    jQuery('#Arriba').click(function () {  //Manejador del evento click que ejecuta cierta funcion
+                        jQuery('body,html').animate({scrollTop: 0}, 800); //Animate(): Realiza una animación personalizada 	
+                                                                          //de un conjunto de propiedades.
+                        return false;
+                    });
+                });
+            });
+    */    	
+           $(document).ready(function() {
+                $("#Arriba").hide(); //ocultamos el boton para el primer ejemplo
+                $('#Abajo').fadeIn();
+                $('#Arriba1').fadeOut();
+                
+                $(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 50) {
+                            $('#Arriba1').fadeIn();
+                        } else {
+                            $('#Arriba1').fadeOut();
+                        }
+                    });
+                    $('#Arriba1').click(function () {
+                        $('body,html').animate({scrollTop: 0}, 1500);
+                        return false;
+                    });
+                    $('#Abajo').click(function () {
+                        $('body,html').animate({scrollTop: $(document).height()}, 10); //obtenemos el alto del documento
+                        return false;
+                    });
+                });
+            });
+        </script>
+
+    
+</head>
+<body class="hidden">
+        <div id='Arriba'> </div>
+
+        <div id="ArribayAbajo"> 
+            <div id='Arriba1'> </div>
+            <div id='Abajo'> </div>
+        </div>
+        <br>
+                  
+    <div class="centrado" id="onload">
+         <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+
+ <header class="main-header">
+
+    <div class="container container--flex">
+    <div class="logo-container column--50"><img class="logo" src="img/logo_onda_amagallanes.jpg" alt="">
+    </div>
+  
+    <div class="main-header__contactInfo column column--50">
+        <p class="main-header__contactInfo__phone">
+            <span class="icon-telfono"> 231 47 51 Ext: 215 o 230</span>
+        </p>
+        <p class="main-header__contactInfo__address">
+            <span class="icon-bsqueda"> Calle 10 N° 23  oeste 15-78, Medellín</span>   
+        </p>
+    </div>
+       
+     </div>    
+    </div>
+  
+     <nav class="main-nav">   
+        <div class="container container--flex">
+            <span class="icon-menu" id="btnMenu"></span>
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link">Inicio</a>
+                </li>
+                <li class="menu__item"><a href="equipo.html" class="menu__link menu__link--select">Equipo</a>
+                </li>
+                <li class="menu__item"><a href="tipos.html" class="menu__link">Tipos</a>
+                </li>
+                <li class="menu__item"><a href="contacto.html" class="menu__link">Contactenos</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                  </form>
+
+            <div class="social-icon"> 
+                <a href="https://es-la.facebook.com/Web.com/"" class="social-icon__link"><span class="icon-facebook"></span></a>
+                 <a href="https://twitter.com/webdotcom"  class="social-icon__link"><span class="icon-twitter"></span></a>
+                <a href="file:///E:/INFORMACIÒN/Santiago%20isaza/Documents/Pagina%20web%20Completa/calendario.html"  class="social-icon__link"><span class="icon-calendario"></span></a>
+                 <a href="https://www.youtube.com/watch?v=xa1gLaVLdlg"  class="social-icon__link"><span class="icon-youtube"></span></a>
+                 <a href="mailto:paginaweb@gmail.com""  class="social-icon__link"><span class="icon-envelope"></span></a>
+                 
+    </div>
+       </div>
+      
+    </nav>
+      <section class="banner">
+              <br>
+              
+
+            <img src="img/fonfoequipo3.jpg" alt="" class="banner__img">
+                       
+            <div class="banner__content">Nuestro Equipo Esta a su Servicio</div>  
+            <br>
+            <br>
+            <br>
+        </section>
+        </header> 
+        <br>
+        
+       <main class="main">
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+
+            <section class="group group--color"> 
+                <div class="container">
+            <h2 main_tittle>Sobre el Equipo</h2>
+            <p class="main__txt"> 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.Quisquam cum nam asperiores dolore! Ullam in provident neque excepturi quasi? Sapiente ad optio dolorem aliquid magni impedit,temporibus velit quo adipisci,Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam nobis aspernatur sed quis sapiente maxime dicta, consequuntur nihil deserunt tenetur.
+            </p> 
+        </section>
+        <br>
+         <br>
+        <section class="group our-team">
+
+            <h2 class="group__tittle">Nuestro Desarrolladores</h2>
+            <br>
+
+            <div class="container container--flex">
+                <div class="column column--33">
+                    <h3 class="our-team__title">Grupo de Desarrolladores I</h3>
+                    <br>
+                    <img src="img/imagendesarrollo2.jpg" alt="" class="our-team__img">
+                    <p class="our-team__txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem nisi iusto, debitis sed aliquam repudiandae eum, voluptatem necessitatibus voluptatum dicta porro quas modi suscipit qui hic obcaecati asperiores voluptatibus eveniet!
+                    </p>
+                </div>
+                <div class="column column--33">
+                    <h3 class="our-team__title">Grupo de Desarrolladores II</h3>
+                    <br>
+                    <img src="img/imagendesarrollo3.jpg" alt="" class="our-team__img">   
+                    <p class="our-team__txt">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor quis repellendus, explicabo deserunt fugiat sequi, eum ab assumenda, laudantium eos sint officia. Consequuntur illum quae veritatis impedit corporis expedita rerum.
+                    </p>
+                </div>
+                <div class="column column--33">
+                    <h3 class="our-team__title">Grupo Desarrolladores III</h3>
+                    <br>
+                    <img src="img/imagendesarrollo4.jpg" alt="" class="our-team__img">
+                    <p class="our-team__txt">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sapiente eum aliquid doloribus aperiam ab, illum molestiae consequatur impedit beatae culpa nobis quos ipsam odit itaque sunt adipisci reprehenderit! Delectus?
+                    </p>
+                </div>
+            </div>
+        </section>
+       
+        </main>
+          
+        <footer class="main-footer"> 
+                <div class="container container--flex">
+                    <div class="column column--33">
+                        <h2>Visitanos en nuestra Página y Redes Sociales</h2>
+                      <p>Hacemos Realidas Tus Idas  e Innovamos en tu Sitio Web.
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit nisi dolorum culpa error rerum consectetur repellendus aut.
+                     </p>
+                    </div>
+                    <div class="column column--33">
+                        <h2 class="column--title"> Contáctenos </h2>
+                     <p class="column_txt"> Teléfono 231 47 51 Ext: 215 o 230</p>
+                     <p class="column_txt"> Dirección Calle 10 N° 23 oeste 15-78, Medellín</p>
+                     <p class="column_txt">paginaweb@gmail.com</p>
+                      </div> 
+         
+                     <div class="column column--33">
+                        <h2 class="column--title"> Siguenos en Redes </h2>
+                     <p class="column_txt"><a href=https://es-la.facebook.com/Web.com/""" class="icon-facebook">Siguenos en Facebook</a></p>
+                     <p class="column_txt"><a href="https://twitter.com/webdotcom" class="icon-twitter">Siguenos en Twitter </a></p>
+                     <p class="column_txt"><a href="https://www.youtube.com/watch?v=xa1gLaVLdlg" class="icon-youtube">Siguenos en Youtube</a></p>
+                  </div>
+         
+                  <p class="copy"> copyright © 2019 Sitio Web / Todos los Derechos Reservados. </p>
+         
+         
+                </div>
+                  
+                    
+                 
+                         
+                 </div>
+              </footer>
+
+   
+         
+           
+        
+                
+        </div>
+     </footer>
+     <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

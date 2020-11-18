@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sitio Web</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/estilosoverlay.css">
+    <link href="https://file.myfontastic.com/okddXECRAaGzkXdxgiwqXk/icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estilos/buscar.css">
+    <link rel="stylesheet" href="style/estilos.css">
+    <link rel="stylesheet" href="estilos/styles.css">
+    
+     <script src='http://code.jquery.com/jquery-1.10.2.min.js' type='text/javascript'></script>
+
+    <script type='text/javascript'>
+        //Función para ir hasta arriba del documento
+        //Objeto JQuery(): Devuelve una colección de elementos coincidentes con el o los argumentos pasados,
+        //ya sea que se encuentren en el DOM o sean creados por el paso de una cadena HTML.
+        
+           /* jQuery.noConflict();				//Renunciar al control de jQuery de la variable $.
+                                                //$ es un selector que le pasa atributos a JQuery()
+            jQuery(document).ready(function() { //Especifica una funcion que se ejecuta cuando el DOM (Documento)
+                                                //esta completamente cargado
+                jQuery("#ArribayAbajo").hide(); 	//ocultamos el boton para el primer ejemplo
+                jQuery("#Arriba").hide();		//Oculta los elementos que coincidad con el identificador
+                jQuery(function () {			//JQuery(funcion()) Ejecuta la funcion cuando se carga el DOM (esta listo)
+                    jQuery(window).scroll(function () { //Manejador del evento 'scroll' que ejecuta cierta funcion
+                        if (jQuery(this).scrollTop() > 50) { //Obtiene el valor de la posicion actual de la barra de 	
+                                                             //'scroll' con respecto al elemento, en este caso 'this'
+                            jQuery('#Arriba').fadeIn();		 //Muestra los elementos coincidentes con un efecto de  		
+                                                             //desvanecimiento
+                        } else {
+                            jQuery('#Arriba').fadeOut();     //Oculta los elementos coincidentes con un efecto de  		
+                                                             //desvanecimiento
+                        }
+                    });
+                    jQuery('#Arriba').click(function () {  //Manejador del evento click que ejecuta cierta funcion
+                        jQuery('body,html').animate({scrollTop: 0}, 800); //Animate(): Realiza una animación personalizada 	
+                                                                          //de un conjunto de propiedades.
+                        return false;
+                    });
+                });
+            });
+    */    	
+           $(document).ready(function() {
+                $("#Arriba").hide(); //ocultamos el boton para el primer ejemplo
+                $('#Abajo').fadeIn();
+                $('#Arriba1').fadeOut();
+                
+                $(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 50) {
+                            $('#Arriba1').fadeIn();
+                        } else {
+                            $('#Arriba1').fadeOut();
+                        }
+                    });
+                    $('#Arriba1').click(function () {
+                        $('body,html').animate({scrollTop: 0}, 1500);
+                        return false;
+                    });
+                    $('#Abajo').click(function () {
+                        $('body,html').animate({scrollTop: $(document).height()}, 10); //obtenemos el alto del documento
+                        return false;
+                    });
+                });
+            });
+        </script>
+        
+      <!-- Start of Async Drift Code -->
+<script>
+    "use strict";
+    
+    !function() {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+        t.factory = function(e) {
+          return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+          var i = document.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(o, i);
+        };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('c3d3vsbdt5xh');
+    </script>
+    <!-- End of Async Drift Code -->
+    
+</head>
+<body class="hidden">
+
+        <div id='Arriba'> </div>
+
+        <div id="ArribayAbajo"> 
+            <div id='Arriba1'> </div>
+            <div id='Abajo'> </div>
+        </div>
+        <br>
+    <div class="up">
+        <span class="icon icon-up-open"></span>
+    </div>
+    
+    <section>
+        <br>
+        <h1>Slider de Imàgenes</h1>
+        <br>
+        <br>
+
+        <div class="slider">
+            <input type="radio" id="sbuttom1" name="sradio">
+            <label for="sbuttom1"></label>
+            <input type="radio" id="sbuttom2" name="sradio">
+             <label for="sbuttom2"></label>   
+            <input type="radio" id="sbuttom3" name="sradio">
+            <label for="sbuttom3"></label>
+            <input type="radio" id="sbuttom4" name="sradio">
+            <label for="sbuttom4"></label>
+            <ul>
+                <li><img src="img/slider7.gif" alt=""></li>
+                <li><img src="img/slider4.png" alt=""></li>
+                <li><img src="img/slider5.jpg" alt=""></li>
+                <li><img src="img/slider6.jpg" alt=""></li>
+            </ul>
+        </div>
+        
+  
+        
+    <br>
+      <br>
+      <br>
+      <br>
+            
+    <div class="centrado" id="onload">
+         <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+
+    
+
+ <header class="main-header">
+
+    <div class="container container--flex">
+    <div class="logo-container column--50"><img class="logo" src="img/logo_onda_amagallanes.jpg" alt="">
+    </div>
+  
+    <div class="main-header__contactInfo column column--50">
+        <p class="main-header__contactInfo__phone">
+            <span class="icon-telfono"> 231 47 51 Ext: 215 o 230</span>
+        </p>
+        <p class="main-header__contactInfo__address">
+            <span class="icon-bsqueda"> Calle 10 N° 23  oeste 15-78, Medellín</span>   
+        </p>
+    </div>
+       
+     </div>    
+    </div>
+
+    
+
+  
+     <nav class="main-nav">   
+        <div class="container container--flex">
+            <span class="icon-menu" id="btnMenu"></span>
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link menu__link--select">Inicio</a>
+                </li>
+                <li class="menu__item"><a href="equipo.html" class="menu__link">Equipo</a>
+                </li>
+                <li class="menu__item"><a href="tipos.html" class="menu__link">Tipos</a>
+                </li>
+                <li class="menu__item"><a href="contacto.html" class="menu__link">Contactenos</a>
+
+               </li>
+           
+            
+           
+            </ul>
+            <form>
+                <fieldset>
+                    <input type="search" placeholder="Buscar...">
+                    <button type="submit"></button>
+                    <i class="fa fa-search-minus" aria-hidden="true"></i>
+
+
+              </fieldset>
+      </form>
+
+
+            <div class="social-icon"> 
+                <a href="https://es-la.facebook.com/Web.com/"" class="social-icon__link"><span class="icon-facebook"></span></a>
+                 <a href="https://twitter.com/webdotcom"  class="social-icon__link"><span class="icon-twitter"></span></a>
+                <a href="file:///E:/INFORMACIÒN/Santiago%20isaza/Documents/Pagina%20web%20Completa/calendario.html"  class="social-icon__link"><span class="icon-calendario"></span></a>
+                 <a href="https://www.youtube.com/watch?v=xa1gLaVLdlg"  class="social-icon__link"><span class="icon-youtube"></span></a>
+                 <a href="mailto:paginaweb@gmail.com""  class="social-icon__link"><span class="icon-envelope"></span></a>
+                
+         
+                
+           </div>
+       </div>
+      
+    </nav>
+      <section class="banner">
+              <br>
+              <br>
+            <img src="img/fondo.jpg" alt="" class="banner__img">
+                       
+            <div class="banner__content">Creación de Sitios web a la Medida</div>  
+            <br>
+        </section>
+        </header> 
+        <div class="cm-up" id="cm-up">
+                <input type="button" class="cm-text-up" value="Subir al Inicio">
+                <span class="cm-icon">
+                    <i class="fas fa-chevron-up"></i>
+                </span>
+            </div>
+
+                   
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       <main class="main">
+            <section class="group group--color"> 
+                <div class="container">
+            <h2 main_tittle> Bienvenidos a mi Página Web Moderna</h2>
+            <br>
+        
+            <p class="main__txt"> 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cum nam asperiores dolore! Ullam in provident neque excepturi quasi? Sapiente ad optio dolorem aliquid magni impedit,
+                 temporibus velit quo adipisci.
+            </p>
+           
+            <h2 main_title>Creando la página web en VSC</h2>
+            <br>
+                <p class="main__txt">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam ratione odio dolore temporibus facere minus tenetur deleniti ea?
+                     Sed labore quibusdam ad architecto ut ducimus minima fugiat dicta assumenda.
+                </p>
+                </div>
+                 
+            </section>
+         
+       
+        </main>
+        
+        <section>
+                      
+        <h1>Galeria de Imagenes con Lightbox</h1>
+        <br>
+        <ul class="figuras"> 
+        <li><a href="#img1"><img src="img/imagen1.jpg"></a></li>
+        <li><a href="#img2"><img src="img/imagenes7.jpg"></a></li>
+        <li><a href="#img3"><img src="img/imaegeneswordpress.jpg"></a></li>
+        <li><a href="#img4"><img src="img/imagenes8.jpg" ></a></li>
+        </ul>
+       
+            <div class="modal" id="img1">
+                <h3>Computador</h3>
+                <div class="image">
+                    <a href=#img4">&#60;</a>
+                    <a href="#img2"><img src="img/imagenes7.jpg"></a>
+                    <a href="#img3">></a>
+
+                 </div>
+                 <a class="cerrar" href="">x</a>
+
+            </div>
+            <div class="modal" id="img2">
+                    <h3>Sofware</h3>
+                    <div class="image">
+                        <a href="#img1">&#60;</a>
+                        <a href="#img3"><img src="img/imagen1.jpg"></a>
+                        <a href="#img4">></a>
+    
+                     </div>
+                     <a class="cerrar" href="">x</a>
+    
+            </div>
+             <div class="modal" id="img3">
+                        <h3>Worpress</h3>
+                        <div class="image">
+                            <a href="#img2">&#60;</a>
+                            <a href="#img4"><img src="img/imaegeneswordpress.jpg"></a>
+                            <a href="#img1">></a>
+        
+                         </div>
+                         <a class="cerrar" href="">x</a>
+        
+             </div>
+             <div class="modal" id="img4">
+                    <h3>Seguridad</h3>
+                    <div class="image">
+                        <a href="#img3">&#60;</a>
+                        <a href="#img2"><img src="img/imagenes8.jpg"></a>
+                        <a href="#img1">></a>
+    
+                     </div>
+                     <a class="cerrar" href="">x</a>
+    
+                </div> 
+</section>
+
+    <main>
+    
+       <section class="group today-special">
+           <h2 class="group-special">Diferentes Webs</h2>
+
+           <div class="container container--flex">
+               <div class="column column--50-25">
+                   <img src="img/document-2.png" alt="" class="today-special__img">
+                   <div class="today-special__title">Web</div>
+                   <div class="today-special__price">1.0</div>
+               </div>
+               <div class="column column--50-25">
+                   <img src="img/web2.0.jpg" alt="" class="today-special__img">
+                   <div class="today-special__title">Web</div>
+                   <div class="today-special__price">2.0</div>
+               </div>
+               <div class="column column--50-25">
+                   <img src="img/webs3.0.jpg" alt="" class="today-special__img">
+                   <div class="today-special__title">Web</div>
+                   <div class="today-special__price">3.0</div>
+               </div>
+               <div class="column column--50-25">
+                   <img src="img/web4-0.png" alt="" class="today-special__img">
+                   <div class="today-special__title">Web</div>
+                   <div class="today-special__price">4.0</div>
+               </div>
+               <div class="column column--50-25">
+                   <img src="img/web-5.0.jpg" alt="" class="today-special__img">
+                   <div class="today-special__title">Web</div>
+                   <div class="today-special__price">5.0</div>
+               </div>
+               <div class="column column--50-25">
+                   <img src="img/web6.0.jpg" alt="" class="today-special__img">
+                   <div class="today-special__title">Web</div>
+                   <div class="today-special__price">6.0</div>
+      
+               </div>
+           </div>
+ </section>
+
+        <section class="about" id="hosting">
+            <!---img src="img/imagenes3descarga.jpg" alt="">--->
+           <div class="contenedor">
+               
+                <h3>Tipos de Hosting</h3>
+                <p class="after"> Hosting Gratuitos</p>
+                <div class="hostings">
+                    <div class="caja-hosting">
+                        <img src="img/imagneshostinggratuito.png" alt="">
+                        <h4>Hosting Gratuito</h4>
+                        <p>Estos servicios de hosting suelen ser gratuitos .</p>
+                    </div>
+                    <div class="caja-hosting">
+                            <img src="img/imagenesíndicecompartido.png" alt="">
+                            <h4>Hosting Compartido.</h4>
+                            <p>consiste en alojar varias páginas web</p>
+                        </div>
+                        <div class="caja-hosting">
+                                <img src="img/imageneshostingvirtual2.jpg" alt="">
+                                <h4>Hosting Virtual</h4>
+                                <p>Nos permite recursos en el Servidor Web </p>
+                            </div>
+                            
+         </div>
+        
+        </section>                 
+        <section class="work contenedor" id="trabajo">
+            <h3>Diseño Web</h3>
+            <p class="after">Construimos tu sitio web a las necesidades de las personas</p>
+            <div class="botones-work">
+             <ul>
+                <li class="filter active" data-nombre='todos'>Todos</li> 
+                <li class="filter" data-nombre='programacion'>Programación</li>
+                <li class="filter" data-nombre='marketing'>Marketing</li>
+                <li class="filter" data-nombre='diseñador'>Diseñadores</li>
+             </ul>     
+
+            </div>
+            
+            <div class="galeria-work">
+                <div class="cont-work programacion">
+                    <div class="img-work">
+                        <img src="img/imagenes12.jpg" alt="">
+                    </div>
+                    <div class="texto-work">
+                        <h4>Programacion</h4>
+                    </div>
+
+                </div>
+                <div class="cont-work programacion">
+                        <div class="img-work">
+                            <img src="img/imagenesíndice3.jpg" alt="">
+                        </div>
+                        <div class="texto-work">
+                            <h4>Programacion</h4>
+                        </div>
+    
+                    </div>
+                    <div class="cont-work programacion">
+                            <div class="img-work">
+                                <img src="img/images13.jpg" alt="">
+                            </div>
+                            <div class="texto-work">
+                                <h4>Programacion</h4>
+                            </div>
+                    </div>
+                    <div class="cont-work marketing">
+                            <div class="img-work">
+                                <img src="img/imagenesfeedback_nuevo.jpg" alt="">
+                            </div>
+                            <div class="texto-work">
+                                <h4>Marketing</h4>
+                            </div>
+        
+                        </div>
+                        <div class="cont-work marketing">
+                                <div class="img-work">
+                                    <img src="img/imagenesmarketing.jpeg" alt="">
+                                </div>
+                                <div class="texto-work">
+                                    <h4>Marketing</h4>
+                                </div>
+            
+                            </div>
+                            <div class="cont-work marketing">
+                                    <div class="img-work">
+                                        <img src="img/imagenesdescarga5.jpg" alt="">
+                                    </div>
+                                    <div class="texto-work">
+                                        <h4>Marketing</h4>
+                                    </div>
+                            </div>
+                            <div class="cont-work diseño">
+                                    <div class="img-work">
+                                        <img src="img/imagenes6.jpg" alt="">
+                                    </div>
+                                    <div class="texto-work">
+                                        <h4>Diseño</h4>
+                                    </div>
+                
+                                </div>
+                                <div class="cont-work diseño">
+                                        <div class="img-work">
+                                            <img src="img/imagesdiseño.jpg" alt="">
+                                        </div>
+                                        <div class="texto-work">
+                                            <h4>Diseño</h4>
+                                        </div>
+                    
+                                    </div>
+                                    <div class="cont-work diseño">
+                                            <div class="img-work">
+                                                <img src="img/imagesdiseño1.jpg" alt="">
+                                            </div>
+                                            <div class="texto-work">
+                                                <h4>Diseño</h4>
+                                            </div>
+                        
+                                        </div>
+                
+        
+      
+            </div>
+        </section>
+    </main>
+  
+
+<footer class="main-footer"> 
+       <div class="container container--flex">
+           <div class="column column--33">
+               <h2>Visitanos en nuestra Página y Redes Sociales</h2>
+             <p>Hacemos Realidas Tus Idas  e Innovamos en tu Sitio Web.
+             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit nisi dolorum culpa error rerum consectetur repellendus aut.
+            </p>
+           </div>
+           <div class="column column--33">
+               <h2 class="column--title"> Contáctenos </h2>
+            <p class="column_txt"> Teléfono 231 47 51 Ext: 215 o 230</p>
+            <p class="column_txt"> Dirección Calle 10 N° 23 oeste 15-78, Medellín</p>
+            <p class="column_txt">paginaweb@gmail.com</p>
+             </div> 
+
+            <div class="column column--33">
+               <h2 class="column--title"> Siguenos en Redes </h2>
+            <p class="column_txt"><a href="https://es-la.facebook.com/Web.com/"" class="icon-facebook">Siguenos en Facebook</a></p>
+            <p class="column_txt"><a href="https://twitter.com/webdotcom" class="icon-twitter">Siguenos en Twitter </a></p>
+            <p class="column_txt"><a href="https://www.youtube.com/watch?v=xa1gLaVLdlg" class="icon-youtube">Siguenos en Youtube</a></p>
+         </div>
+
+         <p class="copy"> copyright © 2019 Sitio Web / Todos los Derechos Reservados. </p>
+
+
+       </div>
+         
+           
+        
+                
+        </div>
+     </footer>
+     <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/fontawesome-all.min.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/up.js"></script>
+  
+    
+    
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Contactenos/Sitio Web</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Sofia&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="estilos/estilosoverlay.css">
+    <link href="https://file.myfontastic.com/okddXECRAaGzkXdxgiwqXk/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/contacto.css">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <script src='http://code.jquery.com/jquery-1.10.2.min.js' type='text/javascript'></script>
+
+    <script type='text/javascript'>
+        //Función para ir hasta arriba del documento
+        //Objeto JQuery(): Devuelve una colección de elementos coincidentes con el o los argumentos pasados,
+        //ya sea que se encuentren en el DOM o sean creados por el paso de una cadena HTML.
+        
+           /* jQuery.noConflict();				//Renunciar al control de jQuery de la variable $.
+                                                //$ es un selector que le pasa atributos a JQuery()
+            jQuery(document).ready(function() { //Especifica una funcion que se ejecuta cuando el DOM (Documento)
+                                                //esta completamente cargado
+                jQuery("#ArribayAbajo").hide(); 	//ocultamos el boton para el primer ejemplo
+                jQuery("#Arriba").hide();		//Oculta los elementos que coincidad con el identificador
+                jQuery(function () {			//JQuery(funcion()) Ejecuta la funcion cuando se carga el DOM (esta listo)
+                    jQuery(window).scroll(function () { //Manejador del evento 'scroll' que ejecuta cierta funcion
+                        if (jQuery(this).scrollTop() > 50) { //Obtiene el valor de la posicion actual de la barra de 	
+                                                             //'scroll' con respecto al elemento, en este caso 'this'
+                            jQuery('#Arriba').fadeIn();		 //Muestra los elementos coincidentes con un efecto de  		
+                                                             //desvanecimiento
+                        } else {
+                            jQuery('#Arriba').fadeOut();     //Oculta los elementos coincidentes con un efecto de  		
+                                                             //desvanecimiento
+                        }
+                    });
+                    jQuery('#Arriba').click(function () {  //Manejador del evento click que ejecuta cierta funcion
+                        jQuery('body,html').animate({scrollTop: 0}, 800); //Animate(): Realiza una animación personalizada 	
+                                                                          //de un conjunto de propiedades.
+                        return false;
+                    });
+                });
+            });
+    */    	
+           $(document).ready(function() {
+                $("#Arriba").hide(); //ocultamos el boton para el primer ejemplo
+                $('#Abajo').fadeIn();
+                $('#Arriba1').fadeOut();
+                
+                $(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 50) {
+                            $('#Arriba1').fadeIn();
+                        } else {
+                            $('#Arriba1').fadeOut();
+                        }
+                    });
+                    $('#Arriba1').click(function () {
+                        $('body,html').animate({scrollTop: 0}, 1500);
+                        return false;
+                    });
+                    $('#Abajo').click(function () {
+                        $('body,html').animate({scrollTop: $(document).height()}, 10); //obtenemos el alto del documento
+                        return false;
+                    });
+                });
+            });
+        </script>
+    
+</head>
+<body class="hidden">
+
+        <div id='Arriba'> </div>
+
+        <div id="ArribayAbajo"> 
+            <div id='Arriba1'> </div>
+            <div id='Abajo'> </div>
+        </div>
+        <br>
+     
+     <div class="centrado" id="onload">
+         <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+
+ <header class="main-header">
+
+    <div class="container container--flex">
+    <div class="logo-container column--50"><img class="logo" src="img/logo_onda_amagallanes.jpg" alt="">
+    </div>
+  
+    <div class="main-header__contactInfo column column--50">
+        <p class="main-header__contactInfo__phone">
+            <span class="icon-telfono"> 231 47 51 Ext: 215 o 230</span>
+        </p>
+        <p class="main-header__contactInfo__address">
+            <span class="icon-bsqueda"> Calle 10 N° 23  oeste 15-78, Medellín</span>   
+        </p>
+    </div>
+       
+     </div>    
+    </div>
+  
+     <nav class="main-nav">   
+        <div class="container container--flex">
+            <span class="icon-menu" id="btnMenu"></span>
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="index.html" class="menu__link">Inicio</a>
+                </li>
+                <li class="menu__item"><a href="equipo.html" class="menu__link">Equipo</a>
+                </li>
+                <li class="menu__item"><a href="tipos.html" class="menu__link">Tipos</a>
+                </li>
+                <li class="menu__item"><a href="contacto.html" class="menu__link menu__link--select">Contactenos</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+
+            <div class="social-icon"> 
+                    <a href="https://es-la.facebook.com/Web.com/"" class="social-icon__link"><span class="icon-facebook"></span></a>
+                    <a href="https://twitter.com/webdotcom"  class="social-icon__link"><span class="icon-twitter"></span></a>
+                    <a href="file:///E:/INFORMACIÒN/Santiago%20isaza/Documents/Pagina%20web%20Completa/calendario.html"  class="social-icon__link"><span class="icon-calendario"></span></a>
+                    <a href="mailto:paginaweb@gmail.com""  class="social-icon__link"><span class="icon-envelope"></span></a>
+                                  
+    </div>
+       </div>
+      <br>
+    </nav>
+      <section class="banner">
+              <br>
+              <br>
+            <img src="img/página-de-contacto.jpg" alt="" class="banner__img">
+                       
+            <div class="banner__content">Tú Opinión es muy Importante para Nosotros.</div>  
+            <br>
+        </section>
+        </header> 
+        <br>
+        
+       <main class="main">
+           
+        <section class="group contact">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>  
+                <br>  
+                <br>
+                
+            <h2 class="group__title">Contáctenos</h2>
+            <br>
+
+            <p class="map">
+                CESDE., Carrera 42, Medellín, Antioquia
+            </p>
+            <p class="map">
+                Escribanos: <a href="mailto:paginaweb@gmail.com">paginaweb@gmail.com</a>
+            </p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.142050574965!2d-75.56462998587294!3d6.2450038280723135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442859d833cfa3%3A0xa3fca5c91547777f!2sCESDE.!5e0!3m2!1ses!2sco!4v1559986021204!5m2!1ses!2sco" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <br>
+            <br>
+
+          </section>
+        
+
+        <section class="group contact">
+                <h2 class="gruop__title">Formulario</h2>
+                <div class="container container--flex ">
+                    <div class="contact--information column">
+                    <h3 class="column__title">Informaciòn de Contactenos</h3>
+                    <p class="column__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi optio eos non aspernatur odio quibusdam! Vero, ipsa obcaecati. Sequi illo accusamus quis esse iure nobis cum corrupti nihil dolorum porro!
+                    Veritatis laborum illum iure nulla rem expedita numquam.</p>
+                    <br>
+                    
+                    <p class="column__txt"><span class="icon-telfono"></span> Telèfono1:231 47 51 Ext: 215 o 230</p>
+                    <p class="column__txt"><span class="icon-telfono"></span>Telèfono2: 230 58 63 Ext: 231</p>
+                    <p class="column__txt"><span class="icon-bsqueda"></span>Calle 10 N° 23 oeste 15-78, Medellín</p>
+                    <p class="column__txt"><span class="icon-envelope"></span>paginaweb@gmail.com</p>
+                    <br>
+
+                    <div class="social-icon">
+                            <a href="https://es-la.facebook.com/Web.com/"" class="social-icon__link"><span class="icon-facebook"></span></a>
+                            <a href="https://twitter.com/webdotcom"  class="social-icon__link"><span class="icon-twitter"></span></a>
+                            <a href="https://www.youtube.com/watch?v=xa1gLaVLdlg"class="social-icon__link"><span class="icon-youtube"></span></a>
+                            <a href="mailto:paginaweb@gmail.com" class="social-icon__link"><span class="icon-envelope"></span></a>
+
+                    </div>
+                    <br>
+                    <br>
+                    <form action="enviar-prueba.php" method="post" class="contact-information formulario">
+                        <label for="" class="formulario__label">Nombre:</label>
+                        <input type="text" class="formulario__input-txt" name="nombre">
+                        <label for="" class="formulario__label">Ciudad:</label>
+                        <input type="text" class="formulario__input-txt" name="ciudad">
+                        <label for="" class="formulario__label">Correo:</label>
+                        <input type="text" class="formulario__input-txt" name="correo">
+                        <label for="" class="formulario__label">Telèfono:</label>
+                        <input type="text" class="formulario__input-txt" name="telefono">
+                        <label for="" class="formulario__label">Mensaje:</label>
+                        <textarea name="" id="" cols="30" rows="10" class="formulario__textarea">
+                        </textarea>
+                        <input type="submit" class="btn formulario__btn" value="Enviar">
+
+                    </form>
+                </div>    
+                       
+            </section>
+
+          </div>
+        
+        </main>
+        <br>
+
+          
+        <footer class="main-footer"> 
+                <div class="container container--flex">
+                    <div class="column column--33">
+                        <h2>Visitanos en nuestra Página y Redes Sociales</h2>
+                      <p>Hacemos Realidas Tus Idas  e Innovamos en tu Sitio Web.
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit nisi dolorum culpa error rerum consectetur repellendus aut.
+                     </p>
+                    </div>
+                    <div class="column column--33">
+                        <h2 class="column--title"> Contáctenos </h2>
+                     <p class="column_txt"> Teléfono 231 47 51 Ext: 215 o 230</p>
+                     <p class="column_txt"> Dirección Calle 10 N° 23 oeste 15-78, Medellín</p>
+                     <p class="column_txt">paginaweb@gmail.com</p>
+                      </div> 
+         
+                     <div class="column column--33">
+                        <h2 class="column--title"> Siguenos en Redes </h2>
+                     <p class="column_txt"><a href="https://es-la.facebook.com/Web.com/"" class="icon-facebook">Siguenos en Facebook</a></p>
+                     <p class="column_txt"><a href="https://twitter.com/webdotcom" class="icon-twitter">Siguenos en Twitter </a></p>
+                     <p class="column_txt"><a href="https://www.youtube.com/watch?v=xa1gLaVLdlg" class="icon-youtube">Siguenos en Youtube</a></p>
+                  </div>
+         
+                  <p class="copy"> copyright © 2019 Sitio Web / Todos los Derechos Reservados. </p>
+                  
+                </div>
+                           
+                                    
+                 </div>
+              </footer>
+    
+                       
+        </div>
+     </footer>
+
+     <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filtro.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
+
+</body>
+</html>
